@@ -1,15 +1,11 @@
 <a href="<?php echo $routeServer . $urls['routing'] . "?url=home"; ?>">
     Inicio
 </a>
-<a href="<?php echo $routeServer . $urls['routing'] . "?url=services"; ?>">
-    Servicios
-</a>
-<a href="<?php echo $routeServer . $urls['routing'] . "?url=team"; ?>">
+
+<a href="<?php echo $routeServer . $urls['routing'] . "?url=about"; ?>">
     Quiénes Somos
 </a>
-<a href="<?php echo $routeServer . $urls['routing'] . "?url=contact"; ?>">
-    Contáctenos
-</a>
+
 <a href="<?php echo $routeServer . $urls['routing'] . "?url=login"; ?>"  class="login">
     Login
 </a>

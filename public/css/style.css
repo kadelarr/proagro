@@ -70,7 +70,7 @@ body {
     width: 100%;
     text-align: center;
 }
-.login-box {
+/*.login-box {
     display: inline-table;
     border: 1px solid #BDBDBD;
     padding: 10px;
@@ -94,7 +94,7 @@ body {
     color: white;
     border-radius: 4px;
     cursor: pointer;
-}
+}*/
 .content-users nav {
     margin-bottom: 10px;
     font-size: 18px;

@@ -9,6 +9,9 @@ $urls = array(
     'zona' => 'src/views/zonas/zona.php',
     'editarUser' => 'src/views/user/editarUser.php',
     'editarZona' => 'src/views/zonas/editarZona.php',
+    'about' => 'src/views/web/about.php',
+    'contacto' => 'src/views/web/contacto.php',
+
 
     //sistema
     'message' => 'src/views/messages.php',
