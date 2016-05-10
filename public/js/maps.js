@@ -41,7 +41,7 @@
                 loaded = true;
             }
         };
-        xhttp.open("GET", "http://proagro.dev?get=areas", true);
+        xhttp.open("GET", "http://proagro.tuxianof.com?get=areas", true);
         xhttp.send();
     }
 
