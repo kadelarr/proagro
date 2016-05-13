@@ -4,8 +4,10 @@ include_once   $urls['zonaController'];
     $column= $zona->buscarZona($_SESSION['id']);
 if(isset($_POST['initial'])) {
   //Se valida que los campos no esten vacios
-  if($_POST['initial'] != '' && $_POST['id_area'] != '' && $_POST['cut'] != '' ) {
-    
+  if($_POST['initial'] != '' && $_POST['initial'] != '0000-00-00' && $_POST['id_area'] != '' && $_POST['cut'] != '' ) {
+    if(empty($_POST['final'])){
+      $_POST['final'] = null;
+    }
     if($zona->editarZona($_POST)) {
         header("Location: " . $routeServer . $urls['routing'] . "?url=zona");
     } 
@@ -41,13 +43,13 @@ if(isset($_POST['initial'])) {
         </div>
        
        <div>
-          <label>Cantidad de corte: </label>
+          <label>Cantidad de Corte: </label>
           <input type="number" name="count" value="<?php echo $column['count']; ?>">
         </div>
         
         <div>
           <input type="submit" name="submit" value="Actualizar">
-          <a href="<?php echo $routeServer . $urls['routing'] . "?url=zona"; ?>">Cancel</a>
+          <a href="<?php echo $routeServer . $urls['routing'] . "?url=zona"; ?>">Cancelar</a>
         </div>
       </form>
     </div>

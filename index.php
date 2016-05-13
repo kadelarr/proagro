@@ -4,6 +4,7 @@ if (!isset($_SESSION['url'])) {
     $_SESSION['url'] = "http://proagro.tuxianof.com";
 }
 $routeServer = $_SESSION['url'] . "/";
+ 
 include 'src/system/data.php';
 
 //Se valida si se requiere uso de WebServices

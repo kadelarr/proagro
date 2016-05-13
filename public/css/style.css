@@ -121,6 +121,7 @@ body {
 .content-users form div label, .content-users form div input {
     padding: 5px;
     margin-bottom: 10px;
+    width: 200px;
 }
 .content-users input[type=submit] {
     margin-top: 10px;

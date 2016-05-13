@@ -8,7 +8,7 @@ class DataBase
 {
     private $host = "localhost";
     private $username = "root";
-    private $password = "f191Gy1BMr";
+    private $password = "J4H2ga2Kbh";
     private $dataBase = "proagro";
     public $db;
 
@@ -76,11 +76,13 @@ class DataBase
         $sql = "UPDATE " . $table;
         $fields = "";
         foreach ($dataUpdate as $currentField => $currentValue) {
-            $fields .= $currentField . " = ";
-            if ($currentValue["type"] == "text") {
-                $fields .= "'" . $this->validate($currentValue["data"]) . "',";
-            } else {
-                $fields .= $this->validate($currentValue["data"]) . ",";
+            if (!empty($this->validate($currentValue["data"]))) { 
+                $fields .= $currentField . " = ";
+                if ($currentValue["type"] == "text") {
+                    $fields .= "'" . $this->validate($currentValue["data"]) . "',";
+                } else {
+                    $fields .= $this->validate($currentValue["data"]) . ",";
+                }
             }
         }
         $fields = substr($fields, 0, -1);

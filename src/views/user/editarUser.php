@@ -18,11 +18,11 @@ if(isset($_POST['user'])) {
       <input type="hidden" name="userOld" value="<?php echo $column['user'];?>">
       <input type="hidden" name="id" value="<?php echo $column['id'];?>">
         <div>
-          <label>User: </label>
+          <label>Usuario: </label>
           <input type="text" name="user" value="<?php echo $column['user'];?>" required>
         </div>
         <div>
-          <label>Name: </label>
+          <label>Nombre: </label>
           <input type="text" name="name" value="<?php echo $column['name'];?>" required>
         </div>
         <div>

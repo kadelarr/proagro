@@ -16,11 +16,11 @@ if(isset($_POST['user'])) {
     <div class="create-users">
       <form class="" action="<?php echo $routeServer; ?>" method="post">
         <div>
-          <label>User: </label>
+          <label>Usuario: </label>
           <input type="text" name="user" value="" required>
         </div>
         <div>
-          <label>Name: </label>
+          <label>Nombre: </label>
           <input type="text" name="name" value="" required>
         </div>
         <div>

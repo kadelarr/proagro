@@ -106,5 +106,20 @@ class ZonaController{
       }
       return $option;
   }
+
+  public function getAvgAreas() {
+    $sql = "select avg(s.count) as promedio, a.name as name from sowing s INNER JOIN areas a on a.id = s.id_area GROUP by s.id_area";
+    $result = $this->db->query($sql);
+     $table = "";
+      while ($row = $result->fetch_assoc()){
+        $table .= "<tr>"
+          ."<td>" . $row['name']
+          ."</td>"
+          ."<td>" . $row['promedio']
+          ."</td>"
+          ."</tr>";
+      }
+      return $table;
+  }
 }
 ?>

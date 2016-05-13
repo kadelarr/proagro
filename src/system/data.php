@@ -7,6 +7,7 @@ $urls = array(
     'createUser' => 'src/views/user/create.php',
     'createZona' => 'src/views/zonas/createZona.php',
     'zona' => 'src/views/zonas/zona.php',
+    'promedioZona' => 'src/views/zonas/promedioZona.php',
     'editarUser' => 'src/views/user/editarUser.php',
     'editarZona' => 'src/views/zonas/editarZona.php',
     'about' => 'src/views/web/about.php',

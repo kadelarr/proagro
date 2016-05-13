@@ -1,15 +1,15 @@
 <div class="content-users">
   <nav>
-    <a href="<?php echo $routeServer . $urls['routing'] . "?url=createUser"; ?>">Create User</a>
+    <a href="<?php echo $routeServer . $urls['routing'] . "?url=createUser"; ?>">Crear Usuario</a>
   </nav>
   <div class="list-users">
     <table>
       <thead>
         <tr>
-          <th>User</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Action</th>
+          <th>Usuario</th>
+          <th>Nombre</th>
+          <th>Tipo</th>
+          <th>Acción</th>
         </tr>
       </thead>
       <tbody>

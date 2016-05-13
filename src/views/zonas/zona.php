@@ -1,17 +1,18 @@
 <div class="content-users">
   <nav>
     <a href="<?php echo $routeServer . $urls['routing'] . "?url=createZona"; ?>">Crear Zona</a>
+    <a href="<?php echo $routeServer . $urls['routing'] . "?url=promedioZona"; ?>">Promedio Zona</a>
   </nav>
   <div class="list-users">
     <table>
       <thead>
         <tr>
           <th>Lote</th>
-          <th>Fecha de siembra</th>
-          <th>Fecha de corte</th>
-          <th>Fecha final</th>
-          <th>Cantidad de corte</th>
-          <th>Acciones</th>
+          <th>Fecha de Siembra</th>
+          <th>Fecha de Corte</th>
+          <th>Fecha Final</th>
+          <th>Cantidad de Corte</th>
+          <th>Acción</th>
         </tr>
       </thead>
       <tbody>
