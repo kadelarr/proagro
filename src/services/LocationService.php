@@ -50,7 +50,7 @@
       $this->dataByAreas = str_replace("\"[", "[", $this->dataByAreas);
       $this->dataByAreas = str_replace("]\"", "]", $this->dataByAreas);
       //Se imprime la respuesta para el consumo del WebServices
-      echo $this->dataByAreas;
+      return $this->dataByAreas;
     }
 
     public function getSowing(){
@@ -64,7 +64,7 @@
       $this->dataByAreas = str_replace("\"[", "[", $this->dataByAreas);
       $this->dataByAreas = str_replace("]\"", "]", $this->dataByAreas);
       //Se imprime la respuesta para el consumo del WebServices
-      echo $this->dataByAreas;
+      return $this->dataByAreas;
     }
 
     /**
@@ -82,10 +82,10 @@
   //Se realiza una validación del servicio que se trata de obtener
   if(isset($_GET['get'])) {
     if($_GET['get'] == 'areas') {
-      $locations->getAreas();
+      print_r($locations->getAreas());
     }
     if($_GET['get'] == 'sowing') {
-      $locations->getSowing();
+      print_r($locations->getSowing());
     }
   }
 
