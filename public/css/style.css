@@ -166,3 +166,9 @@ table td a {
     font-weight: bold;
     text-decoration: underline;
 }
+
+.chart{
+    height: 100px;
+    width: 600px;
+    text-align: center;
+}

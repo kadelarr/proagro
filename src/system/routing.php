@@ -17,6 +17,7 @@ if (isset($_GET['url'])) {
 //Valida si se requiere de algun servicio y llama a los archivos asociados
 if (isset($_GET['get'])) {
     include_once '../services/LocationService.php';
+    include_once '../services/PromedioService.php';
 }
 
 //Cierra la sesión y redirecciona a la pagina principal

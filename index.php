@@ -21,16 +21,18 @@ if(isset($_GET['get'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="public/css/estilos.css">
+    <link rel="stylesheet" href="public/css/chartist.min.css">
 
 </head>
 <body>
 
 <div id="main-container">
-
+<script src="public/js/jquery-2.2.3.min.js" charset="utf-8"></script>
     <?php
     include_once $urls['menu'];
     include_once $urls['message'];
     include_once $urls[$view];
+
 
     //Cuando se desee eliminar la sesion manualmente.
     if (isset($_GET['close'])) {
@@ -40,10 +42,13 @@ if(isset($_GET['get'])){
 
     if($view == "map"){
     ?>
+
       <script src="public/js/maps.js" charset="utf-8"></script>
     <?php
     }
     ?>
+
+    <script src="public/js/chartist.min.js" charset="utf-8"></script>
     <script src="public/js/message.js" charset="utf-8"></script>
 </div>
 </body>

@@ -20,4 +20,7 @@
     </tbody>
   </table>
   </div>
+
 </div>
+
+<div class="chart"> <div class="ct-chart ct-perfect-fourth"></div></div>

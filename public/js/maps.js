@@ -1,4 +1,4 @@
-(function() {
+(function($) {
     Map = {};
 
     var dataLocations = {};
@@ -32,7 +32,22 @@
      * Consulta la base de datos por medio de ajax
      */
     Map.getDataAjax = function() {
-        var xhttp = new XMLHttpRequest();
+        $.ajax({
+            url:"http://proagro.tuxianof.com?get=areas",
+            dataType:"jsonp", 
+            jsonpCallback: "callback",
+            success: function(data){
+                console.log(data);
+
+                dataLocations = data;
+                clearLocations();
+                loadLocations();
+                loaded = true;
+
+            }
+            
+        })
+    /*    var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
             if (xhttp.readyState == 4 && xhttp.status == 200) {
                 dataLocations = JSON.parse(xhttp.responseText);
@@ -41,8 +56,8 @@
                 loaded = true;
             }
         };
-        xhttp.open("GET", "http://proagro.tuxianof.com?get=areas", true);
-        xhttp.send();
+        xhttp.open("GET", "http://proagro.dev?get=areas", true);
+        xhttp.send();*/
     }
 
     Map.positionMap = function() {
@@ -156,6 +171,6 @@
         divParent.insertBefore(div, divMap);
     }
 
-})();
+})(jQuery);
 google.maps.event.addDomListener(window, 'load', Map.init);
 window.addEventListener('resize', Map.positionMap, true);

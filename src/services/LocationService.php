@@ -38,11 +38,11 @@
           $resultStatus = $this->db->getData("sowing", "id_area = " . $rows['id'] . " AND cut <= now() AND final IS NULL");
           if($resultStatus->num_rows > 0) {
             $data['status'] = "cut";
-            array_push($data['message'], "El lote " . $rows['name'] . " esta en proceso de corte, se identifica por el color rojo");
+            array_push($data['message'], "El lote " . $rows['name'] . " Esta en proceso de corte, se identifica por el color rojo");
           }
           if($resultNextCut->num_rows > 0) {
             $data['status'] = "next";
-            array_push($data['message'], "El lote " . $rows['name'] . " esta a punto de terminar el tiempo para iniciar el corte");
+            array_push($data['message'], "El lote " . $rows['name'] . " Esta a punto de terminar el tiempo para iniciar el corte");
           }
           $this->dataByAreas[$rows['name']] = $data;
       }
@@ -82,10 +82,12 @@
   //Se realiza una validación del servicio que se trata de obtener
   if(isset($_GET['get'])) {
     if($_GET['get'] == 'areas') {
-      print_r($locations->getAreas());
+      echo "callback(".$locations->getAreas().")";
+      
     }
     if($_GET['get'] == 'sowing') {
-      print_r($locations->getSowing());
+      echo "callback(".$locations->getSowing().")";
+      
     }
   }
 
