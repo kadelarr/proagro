@@ -1,14 +1,15 @@
-<div class="p">
+
 <div class="content-promedio">
   <nav>
     <a href="<?php echo $routeServer . $urls['routing'] . "?url=zona"; ?>">Volver Zona</a>
   </nav>
+
   <div class="list-promedio">
-    <table class="tb_promedio">
+    <table>
       <thead>
         <tr>
           <th>Lote</th>
-          <th>Promedio Producción</th>
+          <th>Fecha de Corte Final</th>
           
         </tr>
       </thead>
@@ -16,13 +17,9 @@
       <?php
         include_once   $urls['zonaController'];
         $zona = new ZonaController();
-        echo $zona->getAvgAreas();
+        echo $zona->getCorteFinal();
       ?>
     </tbody>
   </table>
   </div>
-
-</div>
-
-<div class="chart"> <div class="ct-chart ct-perfect-fourth"></div></div>
 </div>

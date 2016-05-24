@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['url'])) {
-    $_SESSION['url'] = "http://proagro.tuxianof.com";
+    $_SESSION['url'] = "http://proagro.dev";
 }
 $routeServer = $_SESSION['url'] . "/";
  

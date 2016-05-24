@@ -32,13 +32,13 @@ if(isset($_POST['user'])) {
         <div>
           <label>Rol: </label>
           <select class="" name="rol">
-            <option value="1" <?php echo $column['rol'] == 1 ? 'selected' : ''; ?>>Admin</option>
-            <option value="2" <?php echo $column['rol'] == 2 ? 'selected' : ''; ?>>User</option>
+            <option value="1" <?php echo $column['rol'] == 1 ? 'selected' : ''; ?>>Administrador</option>
+            <option value="2" <?php echo $column['rol'] == 2 ? 'selected' : ''; ?>>Usuario</option>
           </select>
         </div>
         <div>
-          <input type="submit" name="submit" value="Update">
-          <a href="<?php echo $routeServer . $urls['routing'] . "?url=users"; ?>">Cancel</a>
+          <input type="submit" name="submit" value="Actualizar">
+          <a href="<?php echo $routeServer . $urls['routing'] . "?url=users"; ?>">Cancelar</a>
         </div>
       </form>
     </div>

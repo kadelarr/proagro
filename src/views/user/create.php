@@ -30,13 +30,13 @@ if(isset($_POST['user'])) {
         <div>
           <label>Rol: </label>
           <select class="" name="rol">
-            <option value="1">Admin</option>
-            <option value="2">User</option>
+            <option value="1">Administrador</option>
+            <option value="2">Usuario</option>
           </select>
         </div>
         <div>
-          <input type="submit" name="submit" value="Create">
-          <a href="<?php echo $routeServer . $urls['routing'] . "?url=users"; ?>">Cancel</a>
+          <input type="submit" name="submit" value="Crear">
+          <a href="<?php echo $routeServer . $urls['routing'] . "?url=users"; ?>">Cancelar</a>
         </div>
       </form>
     </div>

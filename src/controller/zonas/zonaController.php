@@ -121,5 +121,43 @@ class ZonaController{
       }
       return $table;
   }
+
+  public function getSiembra(){
+     $table = "";
+      $result = $this->db->query("select areas.name, max(sowing.initial) Fecha_Siembra from areas inner join sowing on sowing.id_area = areas.id GROUP by sowing.id_area");
+      while ($row = $result->fetch_assoc()){
+        $table .= "<tr>"
+          ."<td>" . $row['name']
+          ."</td>"
+          ."<td>" . $row['Fecha_Siembra']
+          ;
+      }
+      return $table;
+  }
+  public function getCorte(){
+     $table = "";
+      $result = $this->db->query("select areas.name, max(sowing.cut) Fecha_Corte from areas inner join sowing on sowing.id_area = areas.id GROUP by sowing.id_area");
+      while ($row = $result->fetch_assoc()){
+        $table .= "<tr>"
+          ."<td>" . $row['name']
+          ."</td>"
+          ."<td>" . $row['Fecha_Corte']
+          ;
+      }
+      return $table;
+  }
+
+  public function getCorteFinal(){
+     $table = "";
+      $result = $this->db->query("select areas.name, max(sowing.final) Fecha_Final from areas inner join sowing on sowing.id_area = areas.id GROUP by sowing.id_area");
+      while ($row = $result->fetch_assoc()){
+        $table .= "<tr>"
+          ."<td>" . $row['name']
+          ."</td>"
+          ."<td>" . $row['Fecha_Final']
+          ;
+      }
+      return $table;
+  }
 }
 ?>
